@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties/>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.93">
-    <script>jenkinespipeline(Declarative Pipeline)
+    <script>jenkinesfile(Declarative Pipeline)
 pipeline{
     agent any
     stages{
@@ -17,7 +17,7 @@ pipeline{
         stage(&apos;Test&apos;){
             steps{
                 sh &apos;make check&apos;
-                j unit &apos;reports/**/*.xml&apos;
+                junit &apos;reports/**/*.xml&apos;
             }
         }
         stage(&apos;Deploy&apos;){
